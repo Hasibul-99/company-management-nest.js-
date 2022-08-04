@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  backend:
+    build: .
+    ports:
+      - 8000:3000
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7.22
+    restart: always
+    environment:
+      MYSQL_DATABASE: admin
+      MYSQL_USER: hasib19
+      MYSQL_PASSOWRD: password
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - .dbdata:/var/lib/mysql
+
