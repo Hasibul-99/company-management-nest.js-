@@ -13,7 +13,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'root',
       password: 'root',
       database: 'admin',
-      entities: [],
+      // entities: [],
+      autoLoadEntities: true,
       synchronize: true,
     }),
     UserModule
