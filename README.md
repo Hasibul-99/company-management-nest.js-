@@ -77,3 +77,9 @@ Nest is [MIT licensed](LICENSE).
 sudo systemctl status docker
 
 sudo docker-compose up
+
+# View container
+docker ps
+
+# View all details
+docker inspect 4e56ea12ba1a
