@@ -18,4 +18,8 @@ export class UserService {
     async create(data): Promise<User> {
         return this.userRepository.save(data);
     }
+
+    async findOneBy(condition): Promise<User> {
+        return this.userRepository.findOneBy(condition);
+    }
 }
